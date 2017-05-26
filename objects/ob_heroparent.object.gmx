@@ -209,6 +209,38 @@ shoot = true
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>/// Check collision lift
+
+if vspeed &gt;= 0         // only if you fall
+if place_meeting(x, y, ob_lift) {
+  while place_meeting(x, y, ob_lift) y--   
+  y += 2
+  gravity = 0
+  vspeed = 0
+  feetcollision = true
+}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>/// Move view
 var moveSpeed = 2
 
@@ -281,41 +313,6 @@ vspeed = 0
 jumpaccel = 0
 //dead = true
 health = 0
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="ob_lift">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Check collision lift
-if dead exit
-
-if vspeed &gt;= 0         // only if you fall
-if place_meeting(x, y, other) {
-  while place_meeting(x, y, other) y--   
-  y += 3
-  gravity = 0
-  vspeed = 0
-  feetcollision = true
-}
-
 
 </string>
           </argument>
