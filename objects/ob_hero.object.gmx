@@ -417,12 +417,21 @@ feetcollision = false
           <argument>
             <kind>1</kind>
             <string>/// Step on arrow
-//if dead exit
+if dead exit
 
 if arrow.phase == ar_Stay {
-    event_perform(ev_collision, ob_lift)
-    
+    if vspeed &gt;= 0         // only if you fall
+    if place_meeting(x, y, other) {
+      while place_meeting(x, y, other) y--   
+      y += 2
+      gravity = 0
+      vspeed = 0
+      feetcollision = true
+    }
 }
+
+
+
 </string>
           </argument>
         </arguments>

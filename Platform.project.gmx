@@ -261,9 +261,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
-    <room>rooms\rm_gtest</room>
-    <room>rooms\room5</room>
     <room>rooms\rm_hosukemustdie</room>
+    <room>rooms\room5</room>
     <room>rooms\room1</room>
     <room>rooms\room3</room>
     <room>rooms\room4</room>
