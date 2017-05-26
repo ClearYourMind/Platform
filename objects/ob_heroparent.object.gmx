@@ -210,18 +210,24 @@ shoot = true
           <argument>
             <kind>1</kind>
             <string>/// Move view
+var moveSpeed = 2
 
-if x &gt; (view_xview[0] + view_wview[0]) - view_hborder[0]
-   view_xview[0] =  x - (view_wview[0] - view_hborder[0])
+
+var dx = x - ((view_xview[0] + view_wview[0]) - view_hborder[0])
+var dy = y - ((view_yview[0] + view_hview[0]) - view_vborder[0])
+if dx &gt; 0
+   view_xview[0] += dx
 if feetcollision   
-if y &gt; (view_yview[0] + view_hview[0]) - view_vborder[0]
-   view_yview[0] += 1.75 //=  y - (view_hview[0] - view_vborder[0])
+if dy &gt; 0
+   view_yview[0] += min(dy, moveSpeed) 
    
-if x &lt; (view_xview[0] + view_hborder[0])
-   view_xview[0] =  x - view_hborder[0]   
+var dx = x - (view_xview[0] + view_hborder[0])
+var dy = y - (view_yview[0] + view_vborder[0])
+if dx &lt; 0
+   view_xview[0] -= abs(dx)   
 if feetcollision   
-if y &lt; (view_yview[0] + view_vborder[0])
-   view_yview[0] -= 1.75  //=  y - view_vborder[0]   
+if dy &lt; 0
+   view_yview[0] -= min(abs(dy), moveSpeed)
    
 if view_xview[0] &lt; 0 view_xview[0] = 0   
 if view_yview[0] &lt; 0 view_yview[0] = 0   
@@ -309,32 +315,6 @@ if place_meeting(x, y, other) {
   vspeed = 0
   feetcollision = true
 }
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//view_object[0] = id
-
 
 
 </string>

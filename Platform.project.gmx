@@ -80,6 +80,8 @@
       <sprite>sprites\sp_build_abyss</sprite>
       <sprite>sprites\sp_reactfloor1</sprite>
       <sprite>sprites\sp_reactfloor2</sprite>
+      <sprite>sprites\sp_build_start</sprite>
+      <sprite>sprites\sp_build_exit</sprite>
     </sprites>
     <sprites name="Hero 2">
       <sprite>sprites\sp_hero2_move</sprite>
@@ -91,6 +93,7 @@
       <sprite>sprites\sp_hero2_stand</sprite>
       <sprite>sprites\sp_hero2_hurt</sprite>
       <sprite>sprites\sp_hero2_jumpfire</sprite>
+      <sprite>sprites\sp_shot_wave</sprite>
       <sprites name="masks">
         <sprite>sprites\sp_coll2_left</sprite>
         <sprite>sprites\sp_coll2_right</sprite>
@@ -117,9 +120,6 @@
       </sprites>
     </sprites>
     <sprite>sprites\sp_mark</sprite>
-    <sprite>sprites\sp_shot_wave</sprite>
-    <sprite>sprites\sp_build_exit</sprite>
-    <sprite>sprites\sp_build_start</sprite>
     <sprites name="Mobs">
       <sprites name="Skelet">
         <sprite>sprites\sp_skelet_idle</sprite>
@@ -261,9 +261,10 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
+    <room>rooms\rm_gtest</room>
+    <room>rooms\room5</room>
     <room>rooms\rm_hosukemustdie</room>
     <room>rooms\room1</room>
-    <room>rooms\room5</room>
     <room>rooms\room3</room>
     <room>rooms\room4</room>
     <room>rooms\room6</room>

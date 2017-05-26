@@ -62,6 +62,7 @@ ob_sensor_to_keys.objOutput = ob_start_control</code>
     <instance objName="ob_wall" x="0" y="352" name="inst_60ABCDD8" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_sensor_control" x="256" y="64" name="inst_68338811" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_sensor_to_keys" x="256" y="80" name="inst_80F49025" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_init" x="896" y="-16" name="inst_CC9C86C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_blocks" x="64" y="120" w="32" h="48" xo="48" yo="0" id="10011295" name="inst_6D19838D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
