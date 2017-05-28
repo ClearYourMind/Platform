@@ -416,21 +416,10 @@ feetcollision = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Step on arrow
-if dead exit
+            <string>/// Check arrow collision
 
-if arrow.phase == ar_Stay {
-    if vspeed &gt;= 0         // only if you fall
-    if place_meeting(x, y, other) {
-      while place_meeting(x, y, other) y--   
-      y += 2
-      gravity = 0
-      vspeed = 0
-      feetcollision = true
-    }
-}
-
-
+if other.phase == ar_Stay
+    event_perform(ev_collision, ob_lift)
 
 </string>
           </argument>
@@ -686,7 +675,7 @@ mask_index = sp_hero_stand
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Check collision lift
+            <string>/// Check lift collision
 
 mask_index = sp_coll_down
 event_inherited()
