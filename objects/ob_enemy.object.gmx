@@ -310,9 +310,12 @@ sc_play_sound(sn_hit, false)
           <argument>
             <kind>1</kind>
             <string>/// Hero knock back
-    
+
+if hurt exit    
 with hero {
-    hspeed = -2*forward
+    x -= hspeed
+    y -= vspeed
+    hspeed = -forward
     vspeed = 0
     accel = 0
 }
